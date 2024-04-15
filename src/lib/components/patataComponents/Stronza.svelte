@@ -1,0 +1,24 @@
+<script lang="ts">
+	export let showStronzetta = false;
+</script>
+
+<div class="bg-white w-80 h-64 rounded-md flex flex-col gap-4 justify-center items-center">
+	<div class="flex flex-col justify-center items-center gap-4">
+		{#if showStronzetta}
+			<p>💩 STRONZETTA 💩</p>
+			<p>😠 MANDAMELO COMUNQUE 😠</p>
+		{:else}
+			<p>💘 TI AMO PATATA 💘</p>
+		{/if}
+
+		<form
+			method="POST"
+			action="?/sendMessage"
+			class="flex flex-col justify-center items-center w-full gap-3"
+		>
+			<input type="checkbox" name="stronza" class="hidden" bind:value={showStronzetta} />
+			<textarea name="messaggio" id="messaggio" class="border px-1 py-1 h-20 w-full"></textarea>
+			<button class="bg-green-500 px-8 py-2 text-white font-semibold rounded-md">INVIA</button>
+		</form>
+	</div>
+</div>
