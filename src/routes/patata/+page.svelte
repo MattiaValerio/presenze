@@ -15,7 +15,7 @@
 	const dontShowStronzaHandler = () => {
 		showStronza = true;
 		showAskBox = false;
-		showStronzetta = false;
+		showStronzetta = true;
 	};
 </script>
 

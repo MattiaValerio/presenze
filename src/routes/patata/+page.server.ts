@@ -18,16 +18,16 @@ export const actions: Actions = {
 			stronza = true;
 		}
 
-		if (message === null) return { message: 'Messaggio vuoto' };
+		if (message === null) return { success: false, message: 'Messaggio vuoto' };
 
 		db.insert(messaggi)
 			.values({
-				id: Math.random().toString(),
+				id: crypto.randomUUID().toString(),
 				text: message.toString(),
 				stronza: stronza
 			})
 			.returning();
 
-		return { message: 'Messaggio inviato a pipo 💓💓💓' };
+		return { success: true, message: 'Messaggio inviato a pipo 💓💓💓' };
 	}
 };
