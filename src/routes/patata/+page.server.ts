@@ -1,32 +1,42 @@
 import { db } from '$lib/server/db';
-import { messaggi } from '$lib/server/schema';
+import { message } from '$lib/server/schema';
+import { redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 
-export const load = (async () => {
+export const load = (async (event) => {
+	if (event.locals.user?.username !== 'PatataBeissima' || event.locals.user?.username == null)
+		redirect(302, '/login');
 	return {};
 }) satisfies PageServerLoad;
 
 export const actions: Actions = {
 	sendMessage: async ({ request }) => {
 		// read the message input from the form
-		let stronza = false;
 		const data = await request.formData();
-		const message = data.get('message');
+		const msg = data.get('messaggio');
 		const patatStronz = data.get('stronza');
+		let stronza = false;
 
-		if (patatStronz) {
+		if (patatStronz == 'on') {
 			stronza = true;
+		} else {
+			stronza = false;
 		}
 
-		if (message === null) return { success: false, message: 'Messaggio vuoto' };
+		console.log(crypto.randomUUID().toString());
+		console.log(msg?.toString());
+		console.log(stronza);
 
-		db.insert(messaggi)
+		if (msg === null || msg === undefined || msg === '')
+			return { success: false, msg: 'Messaggio vuoto' };
+
+		db.insert(message)
 			.values({
 				id: crypto.randomUUID().toString(),
-				text: message.toString(),
+				text: msg.toString(),
 				stronza: stronza
 			})
-			.returning();
+			.execute();
 
 		return { success: true, message: 'Messaggio inviato a pipo 💓💓💓' };
 	}

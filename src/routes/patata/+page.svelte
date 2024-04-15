@@ -15,7 +15,7 @@
 	const dontShowStronzaHandler = () => {
 		showStronza = true;
 		showAskBox = false;
-		showStronzetta = true;
+		showStronzetta = false;
 	};
 </script>
 
@@ -36,7 +36,13 @@
 		{/if}
 
 		{#if showStronza}
-			<Stronza {showStronzetta} />
+			<Stronza
+				{showStronzetta}
+				on:back={() => {
+					showStronza = false;
+					showAskBox = true;
+				}}
+			/>
 		{/if}
 	</div>
 </div>

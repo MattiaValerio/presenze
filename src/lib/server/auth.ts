@@ -4,7 +4,7 @@ import { adapter } from './schema';
 export const lucia = new Lucia(adapter, {
 	sessionCookie: {
 		attributes: {
-			secure: true
+			secure: false
 		}
 	},
 	getUserAttributes: (attributes) => {

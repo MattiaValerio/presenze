@@ -12,10 +12,10 @@ export const user = pgTable('user', {
 	role: text('role').$type<'admin' | 'user'>().notNull()
 });
 
-export const messaggi = pgTable('message', {
+export const message = pgTable('message', {
 	id: text('id').primaryKey(),
 	text: text('text').notNull(),
-	stronza: boolean('boolean')
+	stronza: boolean('stronza')
 });
 
 export const sessionTable = pgTable('session', {

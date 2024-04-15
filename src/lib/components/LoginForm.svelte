@@ -4,7 +4,7 @@
 
 <div class="flex w-full justify-center items-center">
 	<form
-		method="post"
+		method="POST"
 		use:enhance
 		class="flex flex-col w-8/12 sm:w-8/12 md:w-5/12 xl:w-3/12 px-10 pt-10 pb-3 border rounded gap-3 bg-slate-400"
 	>
