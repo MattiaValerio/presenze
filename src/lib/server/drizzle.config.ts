@@ -5,8 +5,8 @@ export default {
 	out: './src/lib/migrations',
 	driver: 'pg',
 	dbCredentials: {
-		user: 'utenteProva',
-		password: 'passwordProva',
+		user: 'utente1',
+		password: 'password1',
 		host: '127.0.0.1',
 		port: 5432,
 		database: 'ProTrc'

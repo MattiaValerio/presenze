@@ -2,10 +2,10 @@
     "schema": "./src/lib/server/schema.ts",
     "out": "./src/lib/migrations",
     "dbCredentials": {
-        "host": "178.18.254.192",
+        "host": "127.0.0.1",
         "port": 5432,
         "database": "ProTrc",
-        "user": "utenteProva",
-        "password": "passwordProva"
+        "user": "utente1",
+        "password": "password1"
     }
 }

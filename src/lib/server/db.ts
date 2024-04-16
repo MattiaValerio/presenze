@@ -2,10 +2,10 @@ import pg from 'pg';
 import { drizzle } from 'drizzle-orm/node-postgres';
 
 const pool = new pg.Pool({
-	host: 'localhost',
+	host: 'postgres-db',
 	port: 5432,
-	user: 'utenteProva',
-	password: 'passwordProva',
+	user: 'utente1',
+	password: 'password1',
 	database: 'ProTrc'
 });
 export const db = drizzle(pool);
