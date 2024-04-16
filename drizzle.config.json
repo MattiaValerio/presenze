@@ -2,7 +2,7 @@
     "schema": "./src/lib/server/schema.ts",
     "out": "./src/lib/migrations",
     "dbCredentials": {
-        "host": "178.18.254.192",
+        "host": "0.0.0.0",
         "port": 5432,
         "database": "postgres",
         "user": "utenteProva",
