@@ -11,7 +11,6 @@ export const load = (async (event) => {
 
 export const actions: Actions = {
 	sendMessage: async ({ request }) => {
-		// read the message input from the form
 		const data = await request.formData();
 		const msg = data.get('messaggio');
 		const patatStronz = data.get('stronza');
@@ -22,10 +21,6 @@ export const actions: Actions = {
 		} else {
 			stronza = false;
 		}
-
-		console.log(crypto.randomUUID().toString());
-		console.log(msg?.toString());
-		console.log(stronza);
 
 		if (msg === null || msg === undefined || msg === '')
 			return { success: false, msg: 'Messaggio vuoto' };
