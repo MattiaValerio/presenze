@@ -33,6 +33,13 @@ export const actions: Actions = {
 			})
 			.execute();
 
-		return { success: true, message: 'Messaggio inviato a pipo 💓💓💓' };
+		// console.log('s');
+		// const formData = Object.fromEntries(await request.formData());
+		// console.log(formData.messaggio, formData.stronza);
+
+		return {
+			success: true,
+			message: 'Messaggio inviato a pipozzz 💓💓💓'
+		};
 	}
 };

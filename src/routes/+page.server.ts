@@ -7,6 +7,7 @@ export const load = (async (event) => {
 
 	if (event.locals.user.username == 'PatataBeissima') redirect(302, '/patata');
 	return {
-		username: event.locals.user.username
+		username: event.locals.user.username,
+		messaggi: []
 	};
 }) satisfies PageServerLoad;

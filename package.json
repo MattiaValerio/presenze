@@ -46,9 +46,14 @@
 	"type": "module",
 	"dependencies": {
 		"@lucia-auth/adapter-drizzle": "^1.0.7",
+		"bits-ui": "^0.21.3",
+		"clsx": "^2.1.0",
 		"drizzle-orm": "^0.30.7",
+		"lucide-svelte": "^0.368.0",
 		"oslo": "^1.2.0",
 		"pg": "^8.11.5",
-		"postgres": "^3.4.4"
+		"postgres": "^3.4.4",
+		"tailwind-merge": "^2.2.2",
+		"tailwind-variants": "^0.2.1"
 	}
 }
