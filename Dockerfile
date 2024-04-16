@@ -3,7 +3,7 @@ WORKDIR /app
 COPY ./package*.json ./
 RUN npm install --force
 COPY . .
-RUN npm run dev
+CMD ["npm", "run", "dev"] 
 
 
 # FROM node:lts-alpine AS production
