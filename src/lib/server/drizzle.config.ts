@@ -7,7 +7,7 @@ export default {
 	dbCredentials: {
 		user: 'utenteProva',
 		password: 'passwordProva',
-		host: '178.18.254.192',
+		host: '127.0.0.1',
 		port: 5432,
 		database: 'ProTrc'
 	}
