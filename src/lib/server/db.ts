@@ -2,7 +2,7 @@ import pg from 'pg';
 import { drizzle } from 'drizzle-orm/node-postgres';
 
 const pool = new pg.Pool({
-	host: '0.0.0.0',
+	host: '178.18.254.192',
 	port: 5432,
 	user: 'utenteProva',
 	password: 'passwordProva',
