@@ -1,11 +1,12 @@
 import pg from 'pg';
 import { drizzle } from 'drizzle-orm/node-postgres';
 
+import * as schemas from '$lib/server/schema';
+
 const pool = new pg.Pool({
-	host: '127.0.0.1',
-	port: 5432,
-	user: 'utenteProva',
-	password: 'passwordProva',
-	database: 'ProTrc'
+	connectionString: 'postgresql://utenteProva:passwordProva@0.0.0.0:5432/ProTrc?schema=public'
 });
-export const db = drizzle(pool);
+export const db = drizzle(pool, {
+	schema: { ...schemas },
+	logger: true
+});
