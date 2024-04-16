@@ -3,7 +3,7 @@ WORKDIR /app
 COPY ./package*.json ./
 RUN npm install --force
 COPY . .
-RUN npx drizzle-kit push:pg --config=src/lib/server/drizzle.config.ts
+# RUN npx drizzle-kit push:pg --config=src/lib/server/drizzle.config.ts
 RUN npm run build
 
 
